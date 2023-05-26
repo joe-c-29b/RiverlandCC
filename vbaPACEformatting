@@ -1,4 +1,4 @@
-Sub Macro7()
+Sub Macro10()
 '
 ' Macro7 Macro
 '
@@ -29,6 +29,8 @@ Sub Macro7()
     '
     ' Add blank column and row
     '
+    Columns("B:B").Select
+    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
     Columns("B:B").Select
     Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
     Rows("1:1").Select
@@ -71,225 +73,57 @@ Sub Macro7()
     Range("B1").Select
     ActiveSheet.Paste
     '
-    ' BEGIN AESTHETICS
-    ' Add dark borders row1
+    ' Switch sheets
     '
-    Rows("1:1").Select
-    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
-    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
-    With Selection.Borders(xlEdgeLeft)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeTop)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeBottom)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeRight)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
+    Sheets("macro").Select
     '
-    ' Bold Font
+    ' Select Column C
     '
-    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
-    Selection.Font.Bold = True
+    Columns("C:C").Select
+    Application.CutCopyMode = False
+    Selection.Copy
     '
-    ' Repeat dark borders for each section
+    ' Change to source sheet
     '
-    Rows("2:2").Select
-    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
-    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
-    With Selection.Borders(xlEdgeLeft)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeTop)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeBottom)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeRight)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    Selection.Borders(xlInsideVertical).LineStyle = xlNone
-    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
-    With Selection.Interior
-        .Pattern = xlSolid
-        .PatternColorIndex = xlAutomatic
-        .ThemeColor = xlThemeColorDark1
-        .TintAndShade = -0.349986266670736
-        .PatternTintAndShade = 0
-    End With
-    Rows("3:48").Select
-    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
-    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
-    With Selection.Borders(xlEdgeLeft)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeTop)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeBottom)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeRight)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    Selection.Borders(xlInsideVertical).LineStyle = xlNone
-    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    sourceSheet.Select
     '
-    ' Adding background colors
+    ' Paste new columnB
     '
-    Rows("3:48").Select
-    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
-    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
-    With Selection.Interior
-        .Pattern = xlSolid
-        .PatternColorIndex = xlAutomatic
-        .ThemeColor = xlThemeColorDark2
-        .TintAndShade = 0
-        .PatternTintAndShade = 0
-    End With
-    Rows("49:57").Select
-    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
-    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
-    With Selection.Borders(xlEdgeLeft)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeTop)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeBottom)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeRight)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    Selection.Borders(xlInsideVertical).LineStyle = xlNone
-    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
-    With Selection.Interior
-        .Pattern = xlSolid
-        .PatternColorIndex = xlAutomatic
-        .ThemeColor = xlThemeColorDark1
-        .TintAndShade = -0.499984740745262
-        .PatternTintAndShade = 0
-    End With
-    Rows("58:76").Select
-    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
-    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
-    With Selection.Borders(xlEdgeLeft)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeTop)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeBottom)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    With Selection.Borders(xlEdgeRight)
-        .LineStyle = xlContinuous
-        .ColorIndex = 0
-        .TintAndShade = 0
-        .Weight = xlMedium
-    End With
-    Selection.Borders(xlInsideVertical).LineStyle = xlNone
-    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
-    With Selection.Interior
-        .Pattern = xlSolid
-        .PatternColorIndex = xlAutomatic
-        .ThemeColor = xlThemeColorDark2
-        .TintAndShade = 0
-        .PatternTintAndShade = 0
-    End With
+    Range("C1").Select
+    ActiveSheet.Paste
     '
-    ' Bold and increase size of row1
+    ' CREATE TABLE
     '
-    Rows("1:1").RowHeight = 27.75
-    Columns("A:A").ColumnWidth = 14.43
-    Rows("1:1").Select
-    Selection.Font.Size = 12
-    Selection.Font.Size = 14
-    With Selection.Interior
-        .Pattern = xlSolid
-        .PatternColorIndex = xlAutomatic
-        .ThemeColor = xlThemeColorDark1
-        .TintAndShade = -4.99893185216834E-02
-        .PatternTintAndShade = 0
-    End With
+    ActiveSheet.ListObjects.Add(xlSrcRange, Range("$A$1:$FJ$76"), , xlYes).Name = _
+        "Table1"
     '
-    ' Center the numbers
     '
-    Range("C2:FI76").Select
-    With Selection
-        .HorizontalAlignment = xlCenter
-        .VerticalAlignment = xlBottom
-        .WrapText = False
-        .Orientation = 0
-        .AddIndent = False
-        .IndentLevel = 0
-        .ShrinkToFit = False
-        .ReadingOrder = xlContext
-        .MergeCells = False
-    End With
-    
+    '
+    ' Average column
+    '
+    Range("FK1").Select
+    ActiveCell.FormulaR1C1 = "Avg"
+    Range("FK2").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=AVERAGE(Table1[@[e1]:[e163]])"
+    Range("FK3").Select
+    '
+    ' Satisfied count column
+    '
+    Range("FL1").Select
+    ActiveCell.FormulaR1C1 = "Sat_Tot"
+    Range("FL2").Select
+    ActiveCell.FormulaR1C1 = "=COUNTIF(Table1[@[e1]:[e163]], "">3"")"
+    Range("FL3").Select
+    '
+    ' Dissatisfied count column
+    '
+    Range("FM1").Select
+    ActiveCell.FormulaR1C1 = "Diss_Tot"
+    Range("FM2").Select
+    ActiveCell.FormulaR1C1 = "=COUNTIF(Table1[@[e1]:[e163]], ""<3"")"
+    Range("FM3").Select
+
     Call sourceSheet.Activate
     
 End Sub
