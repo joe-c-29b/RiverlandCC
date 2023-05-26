@@ -1,0 +1,75 @@
+Sub Macro7()
+'
+' Macro7 Macro
+'
+' Keyboard Shortcut: Ctrl+q
+'
+    '
+    ' Establish source sheet
+    '
+    Dim sourceSheet As Worksheet
+    Set sourceSheet = ActiveSheet
+    '
+    ' Transpose the table
+    '
+    Range("A1:BW164").Select
+    Range("BW164").Activate
+    Application.CutCopyMode = False
+    Selection.Copy
+    Range("BX1").Select
+    Selection.PasteSpecial Paste:=xlPasteAll, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=True
+    '
+    ' Delete old data
+    '
+    Columns("A:BW").Select
+    Range("BW1").Activate
+    Application.CutCopyMode = False
+    Selection.Delete Shift:=xlToLeft
+    '
+    ' Add blank column and row
+    '
+    Columns("B:B").Select
+    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+    Rows("1:1").Select
+    Selection.Insert Shift:=xlDown, CopyOrigin:=xlFormatFromLeftOrAbove
+    '
+    ' Switch sheets
+    '
+    Sheets("macro").Select
+    '
+    ' Select row 1
+    '
+    Rows("1:1").Select
+    Selection.Copy
+    '
+    ' Change to source sheet
+    '
+    sourceSheet.Select
+    '
+    ' Paste new row1
+    '
+    Range("A1").Select
+    ActiveSheet.Paste
+    '
+    ' Switch sheets
+    '
+    Sheets("macro").Select
+    Columns("B:B").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    '
+    ' Select Column B
+    '
+    sourceSheet.Select
+    '
+    ' Change to source sheet
+    '
+    Range("B1").Select
+    ActiveSheet.Paste
+    '
+    ' Paste new columnB
+    '
+    Call sourceSheet.Activate
+    
+End Sub
