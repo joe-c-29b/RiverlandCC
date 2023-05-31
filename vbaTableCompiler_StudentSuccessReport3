@@ -1,0 +1,140 @@
+Sub DemoComp3()
+'
+' DemoComp3 Macro
+'
+
+'
+    ActiveWindow.SmallScroll Down:=24
+    Rows("1:46").Select
+    Range("A46").Activate
+    Application.CutCopyMode = False
+    Selection.Delete Shift:=xlUp
+    Rows("9:15").Select
+    Range("A15").Activate
+    ActiveWindow.SmallScroll Down:=15
+    Range("9:15,25:31").Select
+    Range("A25").Activate
+    ActiveWindow.SmallScroll Down:=12
+    Range("9:15,25:31,36:42").Select
+    Range("A36").Activate
+    ActiveWindow.SmallScroll Down:=15
+    Range("9:15,25:31,36:42,53:59").Select
+    Range("A53").Activate
+    ActiveWindow.SmallScroll Down:=12
+    Range("9:15,25:31,36:42,53:59,64:70").Select
+    Range("A64").Activate
+    ActiveWindow.SmallScroll Down:=9
+    Range("9:15,25:31,36:42,53:59,64:70,77:79").Select
+    Range("A77").Activate
+    ActiveWindow.SmallScroll Down:=15
+    Range("9:15,25:31,36:42,53:59,64:70,77:79,81:81,85:91").Select
+    Range("A85").Activate
+    ActiveWindow.SmallScroll Down:=15
+    Range("9:15,25:31,36:42,53:59,64:70,77:79,81:81,85:91,101:107").Select
+    Range("A101").Activate
+    ActiveWindow.SmallScroll Down:=9
+    Range("9:15,25:31,36:42,53:59,64:70,77:79,81:81,85:91,101:107,112:118").Select
+    Range("A112").Activate
+    ActiveWindow.SmallScroll Down:=15
+    Range("9:15,25:31,36:42,53:59,64:70,77:79,81:81,85:91,101:107,112:118,129:135") _
+        .Select
+    Range("A129").Activate
+    ActiveWindow.SmallScroll Down:=15
+    Range( _
+        "9:15,25:31,36:42,53:59,64:70,77:79,81:81,85:91,101:107,112:118,129:135,140:146" _
+        ).Select
+    Range("A140").Activate
+    ActiveWindow.SmallScroll Down:=12
+    Range( _
+        "9:15,25:31,36:42,53:59,64:70,77:79,81:81,85:91,101:107,112:118,129:135,140:146,153:155" _
+        ).Select
+    Range("A153").Activate
+    ActiveWindow.SmallScroll Down:=6
+    Range( _
+        "9:15,25:31,36:42,53:59,64:70,77:79,81:81,85:91,101:107,112:118,129:135,140:146,153:155,157:157" _
+        ).Select
+    Range("A157").Activate
+    ActiveWindow.SmallScroll Down:=6
+    Range( _
+        "9:15,25:31,36:42,53:59,64:70,77:79,81:81,85:91,101:107,112:118,129:135,140:146,153:155,157:157,163:167,161:162" _
+        ).Select
+    Range("A161").Activate
+    ActiveWindow.SmallScroll Down:=12
+    Range( _
+        "9:15,25:31,36:42,53:59,64:70,77:79,81:81,85:91,101:107,112:118,129:135,140:146,153:155,157:157,163:167,161:162,177:183" _
+        ).Select
+    Range("A177").Activate
+    ActiveWindow.SmallScroll Down:=9
+    Range( _
+        "9:15,25:31,36:42,53:59,64:70,77:79,81:81,85:91,101:107,112:118,129:135,140:146,153:155,157:157,163:167,161:162,177:183,188:194" _
+        ).Select
+    Range("A188").Activate
+    ActiveWindow.SmallScroll Down:=12
+    Range( _
+        "9:15,25:31,36:42,53:59,64:70,77:79,81:81,85:91,101:107,112:118,129:135,140:146,153:155,157:157,163:167,161:162,177:183,188:194,205:211" _
+        ).Select
+    Range("A205").Activate
+    ActiveWindow.SmallScroll Down:=21
+    Range( _
+        "9:15,25:31,36:42,53:59,64:70,77:79,81:81,85:91,101:107,112:118,129:135,140:146,153:155,157:157,163:167,161:162,177:183,188:194,205:211,216:222" _
+        ).Select
+    Range("A216").Activate
+    ActiveWindow.SmallScroll Down:=-24
+    Selection.Delete Shift:=xlUp
+    ActiveWindow.SmallScroll Down:=-111
+    Range("I84").Select
+    ActiveWindow.SmallScroll Down:=-51
+    Range("A42:M113").Select
+    Selection.Cut
+    ActiveWindow.SmallScroll Down:=-23
+    Range("O5").Select
+    ActiveSheet.Paste
+    ActiveWindow.SmallScroll Down:=45
+    Range("O42:AA76").Select
+    Range("AA76").Activate
+    Selection.Cut
+    ActiveWindow.SmallScroll Down:=-57
+    Range("AC5").Select
+    ActiveSheet.Paste
+    ActiveWindow.SmallScroll Down:=3
+    Range("A6:A39").Select
+    Selection.Copy
+    ActiveWindow.SmallScroll Down:=12
+    Range("A40").Select
+    ActiveSheet.Paste
+    Range("H6:M39").Select
+    Range("M39").Activate
+    Application.CutCopyMode = False
+    Selection.Cut
+    Range("B40").Select
+    ActiveSheet.Paste
+    ActiveWindow.SmallScroll Down:=-20
+    Columns("H:O").Select
+    Selection.Delete Shift:=xlToLeft
+    Range("N6:S39").Select
+    Selection.Cut
+    ActiveWindow.SmallScroll Down:=21
+    Range("H40").Select
+    ActiveSheet.Paste
+    ActiveWindow.SmallScroll Down:=-21
+    Columns("N:T").Select
+    Range("T1").Activate
+    Selection.Delete Shift:=xlToLeft
+    Columns("N:N").Select
+    Selection.Delete Shift:=xlToLeft
+    Range("T6:Y39").Select
+    Selection.Cut
+    ActiveWindow.SmallScroll Down:=15
+    Range("N40").Select
+    ActiveSheet.Paste
+    ActiveWindow.SmallScroll Down:=-15
+    Range("T5:Z5").Select
+    Selection.ClearContents
+    Range("B4:G4").Select
+    Selection.Cut
+    Range("B5").Select
+    ActiveSheet.Paste
+    Range("A1:G4").Select
+    Range("G4").Activate
+    Selection.ClearContents
+End Sub
