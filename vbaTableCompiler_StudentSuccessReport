@@ -1,0 +1,87 @@
+Sub comp1()
+'
+' comp1 Macro
+' Compile all of the present tables into data that will be easily transferred to a different, aggregated table
+'
+
+'
+    Range("B3:G4").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Range("I2").Select
+    ActiveSheet.Paste
+    Range("B11:G12").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Range("O2").Select
+    ActiveSheet.Paste
+    Range("B19:G20").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Range("U2").Select
+    ActiveSheet.Paste
+    Range("B7:G8").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Range("I4").Select
+    ActiveSheet.Paste
+    Range("B15:G16").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Range("O4").Select
+    ActiveSheet.Paste
+    Range("B23:G24").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Range("U4").Select
+    ActiveSheet.Paste
+    Range("B29:G30").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Range("I7").Select
+    ActiveSheet.Paste
+    ActiveWindow.SmallScroll Down:=3
+    Range("B33:G34").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Range("I9").Select
+    ActiveSheet.Paste
+    ActiveSheet.Paste
+    ActiveWindow.SmallScroll Down:=6
+    Range("B37:G38").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    ActiveWindow.SmallScroll Down:=-6
+    Range("O7").Select
+    ActiveSheet.Paste
+    ActiveWindow.SmallScroll Down:=3
+    Range("B41:G42").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Range("O9").Select
+    ActiveSheet.Paste
+    ActiveWindow.SmallScroll Down:=12
+    Range("B45:G46").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    ActiveWindow.SmallScroll Down:=-15
+    Range("U7").Select
+    ActiveSheet.Paste
+    ActiveWindow.SmallScroll Down:=12
+    Range("B49:G50").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    ActiveWindow.SmallScroll Down:=-12
+    Range("U9").Select
+    ActiveSheet.Paste
+    ActiveWindow.SmallScroll Down:=-3
+    Range("B2:G2").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Range("I1").Select
+    ActiveSheet.Paste
+    Range("O1").Select
+    ActiveSheet.Paste
+    Range("U1").Select
+    ActiveSheet.Paste
+End Sub
