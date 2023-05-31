@@ -1,0 +1,21 @@
+Sub SOCComp3()
+'
+' SOCComp3 Macro
+'
+
+'
+    Range("1:1,5:6,9:10,13:14,17:18,21:22").Select
+    Range("A21").Activate
+    Application.CutCopyMode = False
+    Selection.Delete Shift:=xlUp
+    Range("B6:G9").Select
+    Selection.Cut
+    Range("H2").Select
+    ActiveSheet.Paste
+    Range("B10:G13").Select
+    Selection.Cut
+    Range("N2").Select
+    ActiveSheet.Paste
+    Range("A6:A13").Select
+    Selection.ClearContents
+End Sub
