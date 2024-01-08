@@ -1,0 +1,16 @@
+Private Sub CommandButton1_Click()
+
+    Dim strTeach As String
+    Dim strRoute As String
+    
+    strRoute = "C:\Users\qf3636ll\OneDrive - MNSCU\CourseSurveys\Fall\20243_results\Results4Staff\CourseSurveyResults "
+    strTeach = Range("B1").Value
+    
+    ActiveWorkbook.Save
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        strRoute & strTeach & ".pdf", _
+        Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas _
+        :=False, OpenAfterPublish:=False
+
+
+End Sub
