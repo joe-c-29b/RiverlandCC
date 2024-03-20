@@ -1,1 +1,12 @@
-folder
+Here are some instructions:
+What you will need from the database:
+  -rcc - a list consisting of 3 columns from APPSODS.V_COURSE_SUCCESS (TECH_ID, COLLEGE_NAME, YRTR); 
+          this should be a list of every student within a specified window at your school and the YRTRs they were enrolled in at least one course
+  -other - same as rcc, but instead is pulled from APPSODS.TRANSFERS to capture every enrollment the student has had at other colleges
+  -cohort## - a pull from APPSODS.V_STUDENT_PERSISTENCE_DTL2 that has 1 FY starting cohort; you can do this by the YRTR cohort for a more accurate output, but you will have to do those changes yourself
+  ******allColleges - this is not a pull that you will have to do, rather it is a concatenation of rcc and other 
+******It is important that you let the program create allColleges.  It HAS to be a mixture of V_COURSE_SUCCESS and TRANSFERS
+
+Both rcc & other should only be 3 columns named: TECH_ID, COLLEGE_NAME, YRTR.  cohort## can have whatever columns you want, but MUST have the TECH_IDs for an entire cohort.
+
+In order to run this program, you will just need to change the files that it reads in and "Run All"; a .csv should be spit back out in the folder you saved the program in.
